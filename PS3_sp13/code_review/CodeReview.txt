@@ -1,0 +1,15 @@
+Please enter your code review in this file as plain text
+and make sure to include it when you commit your project.
+
+
++Code build correctly and readable.
++Comments are provided for all the public functions.
++Thread safe.
++Thrown exceptions handled properly.
+
+
+Stopwatch.jave:
+-Using running as lock is working but not a good way. Leads to misunderstanding.
+-Pass global variable as parameter is not necessary (line 94)
+
+

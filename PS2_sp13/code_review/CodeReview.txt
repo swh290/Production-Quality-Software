@@ -1,0 +1,43 @@
+Please enter your code review in this file as plain text
+and make sure to include it when you commit your project.
+
+-Does not follow the Java code convention:
+Should be:
+public AddressBook(String userID, String addressBookName){
+		this.userID = userID;
+		this.addressBookName = addressBookName;
+	}
+but was:
+public AddressBook(String userID, String addressBookName)
+	{
+		this.userID = userID;
+		this.addressBookName = addressBookName;
+	}
+	
+Should be:
+file = new File(userID+addressBookName +".adb");
+but was:
+file=new File(userID+addressBookName +".adb");
+
+-indentation inconsistent: sometimes two spaces but sometimes four
+	
+AddressBook.java:
+
+-Unnecessary flag in method removeEntry (line 86) or remove return in the for loop
+-Using String "delimiter" as delimiter when write to file, could fail if "delimiter" is also data stores in contact
+-Forget to modify JavaDoc at line 206
+-Code duplication between line 226 and line 312
+
+Contact.java:
+
+-Bad design of contactId. Need to remember this Id when remove an entry form an address book
+
+EmailAddress.java and PhoneNumber.java:
+
+-Feel comfortable when typing email as name@domain.com but not typing name and domain separately.
+-Same as PhoneNumber
+
+PostalAddress.java:
+-What if an user is not in the U.S. and doesn't have state element in his/her address?
+
+ 
